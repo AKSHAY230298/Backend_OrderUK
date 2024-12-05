@@ -36,7 +36,7 @@ const userPostData = async (req, res) => {
 
 const signInData = async (req, res) => {
   try {
-    console.log(req.body);
+    // console.log(req.body);
 
     const { email, password } = req.body;
 
@@ -68,7 +68,7 @@ const signInData = async (req, res) => {
 const burgerProductInfo = async (req, res) => {
   try {
     const Info = await BurgerInfo.find();
-    // console.log(Info);
+    console.log(Info);
 
     if (!Info) {
       return res.status(400).json({ msg: "Data is not Fetch" });
@@ -110,7 +110,7 @@ const addInCart = async (req, res) => {
   try {
     const { head, price } = req.body;
 
-    console.log(req.body);
+    // console.log(req.body);
 
     const cart = new Cart({
       head: head,
